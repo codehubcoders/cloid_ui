@@ -1,9 +1,21 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
-
-  final count = 0.obs;
+  final List<String> gameImgUrl = [
+    'assets/images/banner_1.png',
+    'assets/images/banner_2.png',
+    'assets/images/banner_1.png',
+    'assets/images/banner_2.png'
+  ];
+  final List<String> nftImgUrl = [
+    'assets/images/img-1.png',
+    'assets/images/img.png',
+    'assets/images/img-1.png',
+    'assets/images/img.png',
+  ];
+  final gameController = PageController(viewportFraction: 0.95);
+  final nftController = PageController(viewportFraction: 0.6);
   @override
   void onInit() {
     super.onInit();
@@ -16,5 +28,4 @@ class HomeController extends GetxController {
 
   @override
   void onClose() {}
-  void increment() => count.value++;
 }
