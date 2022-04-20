@@ -1,5 +1,5 @@
 import 'package:cloid_app/app/core/theme/theme_color.dart';
-import 'package:cloid_app/app/modules/home/views/bottom_seet.dart';
+import 'package:cloid_app/app/global_widget/lang_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -10,6 +10,7 @@ import '../controllers/home_controller.dart';
 class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
+    Get.lazyPut(() => HomeController());
     final _ = Get.find<HomeController>();
 
     final gameImg = List.generate(
@@ -70,42 +71,6 @@ class HomeView extends GetView<HomeController> {
             )));
     return Scaffold(
       backgroundColor: fff,
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        toolbarHeight: 60,
-        elevation: 0,
-        backgroundColor: fff,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Image.asset(
-              'assets/images/logo01.png',
-              width: 80,
-            ),
-            Row(
-              children: [
-                InkWell(
-                  onTap: () {},
-                  child: Image.asset(
-                    'assets/images/ico_link.png',
-                    width: 30,
-                  ),
-                ),
-                SizedBox(width: 10),
-                InkWell(
-                  onTap: () {
-                    openBottomSheet();
-                  },
-                  child: Image.asset(
-                    'assets/images/ico_globe.png',
-                    width: 30,
-                  ),
-                ),
-              ],
-            )
-          ],
-        ),
-      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -158,7 +123,9 @@ class HomeView extends GetView<HomeController> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           InkWell(
-                            onTap: () {},
+                            onTap: () {
+                              Get.toNamed('/bottom-navi');
+                            },
                             child: Column(
                               children: [
                                 Image.asset(

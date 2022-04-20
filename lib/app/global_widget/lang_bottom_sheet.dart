@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../core/theme/theme_color.dart';
+import '../core/theme/theme_color.dart';
 
 void openBottomSheet() {
   final selectLang = 0.obs;

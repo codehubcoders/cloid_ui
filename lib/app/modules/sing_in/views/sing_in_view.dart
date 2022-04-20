@@ -16,7 +16,7 @@ class SingInView extends GetView<SingInController> {
         child: GlobalButton(
           bgColor: primaryColor,
           onTap: () {
-            Get.toNamed('/home');
+            Get.toNamed('/bottom-navi');
           },
           size: Size(Get.width / 1, 50),
           title: 'Connect Wallet',
