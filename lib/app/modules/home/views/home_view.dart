@@ -1,4 +1,5 @@
 import 'package:cloid_app/app/core/theme/theme_color.dart';
+import 'package:cloid_app/app/modules/home/views/bottom_seet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -92,7 +93,9 @@ class HomeView extends GetView<HomeController> {
                 ),
                 SizedBox(width: 10),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    openBottomSheet();
+                  },
                   child: Image.asset(
                     'assets/images/ico_globe.png',
                     width: 30,
