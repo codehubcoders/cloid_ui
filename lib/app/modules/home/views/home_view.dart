@@ -70,7 +70,6 @@ class HomeView extends GetView<HomeController> {
               ),
             )));
     return Scaffold(
-      backgroundColor: fff,
       body: SingleChildScrollView(
         child: Column(
           children: [
