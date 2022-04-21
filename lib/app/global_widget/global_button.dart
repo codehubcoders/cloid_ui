@@ -31,7 +31,7 @@ class GlobalButton extends GetView {
           fixedSize: size,
           primary: bgColor,
           shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
           elevation: 5),
     );
   }
