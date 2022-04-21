@@ -122,9 +122,7 @@ class HomeView extends GetView<HomeController> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           InkWell(
-                            onTap: () {
-                              Get.toNamed('/bottom-navi');
-                            },
+                            onTap: () {},
                             child: Column(
                               children: [
                                 Image.asset(
