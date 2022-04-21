@@ -5,6 +5,11 @@ import 'package:get/get_state_manager/get_state_manager.dart';
 class GamePrayView extends GetView<GamePageController> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(title: Text('게임 검색')),
+      body: Column(
+        children: [],
+      ),
+    );
   }
 }

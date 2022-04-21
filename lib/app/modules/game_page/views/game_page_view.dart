@@ -1,4 +1,5 @@
 import 'package:cloid_app/app/core/theme/theme_color.dart';
+import 'package:cloid_app/app/modules/game_page/views/game_search.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -71,7 +72,9 @@ class GamePageView extends GetView<GamePageController> {
                     ),
                     itemBuilder: (BuildContext context, int index) {
                       return InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Get.to(GameSearchView());
+                        },
                         child: Column(
                           children: [
                             Image.asset(
